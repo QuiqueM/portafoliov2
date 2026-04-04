@@ -1,43 +1,45 @@
-# Astro Starter Kit: Minimal
+# 🚀 Enrique Martínez | Frontend Developer & Web Architect
 
-```sh
-npm create astro@latest -- --template minimal
-```
+¡Bienvenido al repositorio de mi portafolio profesional! Este proyecto es una vitrina de mi trayectoria de 4 años en la industria, enfocada en la creación de interfaces de alto rendimiento, código mantenible y soluciones escalables.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 👨‍💻 Sobre mí
+Soy un desarrollador apasionado por el ecosistema de **Vue.js**. Mi enfoque principal es el Frontend, donde aplico principios **SOLID** y patrones de diseño para transformar ideas complejas en experiencias de usuario excepcionales.
 
-## 🚀 Project Structure
+* **Experiencia:** 4 años en desarrollo web.
+* **Especialidad:** Vue.js, TypeScript y Arquitectura Frontend.
+* **Filosofía:** Mejora continua y código limpio.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Stack Tecnológico
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Este portafolio ha sido construido utilizando tecnologías modernas para garantizar la mejor performance (Core Web Vitals) y SEO:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Frontend & Estilos
+* **Framework:** [Astro](https://astro.build/) (para un rendimiento estático superior).
+* **UI Library:** [Vue.js 3](https://vuejs.org/) (Componentes dinámicos).
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [Vuetify](https://vuetifyjs.com/).
+* **State Management:** [Pinia](https://pinia.vuejs.org/).
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Backend & Tooling
+* **Lenguajes:** TypeScript & JavaScript (ES6+).
+* **Integraciones:** Node.js, Laravel & Strapi (Headless CMS).
+* **Despliegue:** [Vercel](https://vercel.com/).
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 📐 Arquitectura y Principios
+Como desarrollador con enfoque en la calidad del software, este proyecto sigue:
+* **SOLID Principles:** Responsabilidad única en componentes y servicios.
+* **Component-Driven Development:** UI modular y reutilizable.
+* **Type Safety:** Uso riguroso de TypeScript para minimizar errores en tiempo de ejecución.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 🚀 Instalación y Uso Local
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Si deseas explorar el código o correrlo localmente, sigue estos pasos:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/tu-usuario/tu-portafolio.git](https://github.com/tu-usuario/tu-portafolio.git)
