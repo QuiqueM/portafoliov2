@@ -1,0 +1,67 @@
+---
+// Aquí podrías definir los enlaces en un array para que sea más fácil editarlos
+const navLinks = [
+  { href: "#hero", text: "Home", dataAfter: "Home" },
+  { href: "#about", text: "Acerca de Mi", dataAfter: "About" },
+  { href: "#services", text: "Exp. Laboral", dataAfter: "Service" },
+  { href: "#projects", text: "Proyectos", dataAfter: "Projects" },
+  { href: "#contact", text: "Contacto", dataAfter: "Contact" },
+];
+---
+
+<header id="header">
+  <div class="header container">
+    <div class="nav-bar">
+      <div class="brand">
+        <a href="#hero">
+          <h1><span>&lt</span>EMR<span>/</span>&gt</h1>
+        </a>
+      </div>
+      <div class="nav-list">
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+        <ul>
+          {navLinks.map((link) => (
+            <li>
+              <a href={link.href} data-after={link.dataAfter}>
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Astro ejecutará este script automáticamente en el navegador
+  const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+  const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+  const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+  const header = document.querySelector('.header.container');
+
+  hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobile_menu?.classList.toggle('active');
+  });
+
+  // Cerrar el menú al hacer click en un enlace (importante en Single Page)
+  menu_item.forEach((item) => {
+    item.addEventListener('click', () => {
+      hamburger?.classList.toggle('active');
+      mobile_menu?.classList.toggle('active');
+    });
+  });
+
+  // Cambiar color del header al hacer scroll
+  document.addEventListener('scroll', () => {
+    var scroll_position = window.scrollY;
+    if (scroll_position > 250 && header) {
+      header.style.backgroundColor = '#29323c';
+    } else {
+      header.style.backgroundColor = 'transparent';
+    }
+  });
+</script>

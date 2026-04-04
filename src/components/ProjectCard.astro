@@ -1,0 +1,33 @@
+---
+// Definimos qué datos necesita este componente para dibujarse
+interface Props {
+  title: string;
+  description: string;
+  techStack: string;
+  images: string[]; // Un array de rutas de imágenes
+}
+
+const { title, description, techStack, images } = Astro.props;
+---
+
+<div class="project-item">
+  <div class="project-info">
+    <h1>{title}</h1>
+    <h2>Descripción</h2>
+    <p>{description}</p>
+    <p><strong>Tecnologías:</strong> {techStack}</p>
+  </div>
+  
+  <div class="project-img">
+    {images.length > 1 ? (
+      <ul>
+        {images.map((img) => (
+          <li><img src={img} alt={`Captura de ${title}`} /></li>
+        ))}
+      </ul>
+    ) : (
+      <img src={images[0]} alt={`Captura de ${title}`} />
+    )}
+  </div>
+</div>
+

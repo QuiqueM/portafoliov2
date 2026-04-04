@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  companyUrl: string;
+  description: string;
+  iconUrl?: string;
+}
+
+const { 
+  title, 
+  company, 
+  companyUrl, 
+  description, 
+  iconUrl = "https://img.icons8.com/bubbles/100/000000/services.png" 
+} = Astro.props;
+---
+
+<div class="service-item">
+  <div class="icon">
+    <img src={iconUrl} alt={`Icono de ${company}`} />
+  </div>
+  <h2>
+    <a href={companyUrl} class="enlaces" target="_blank" rel="noopener noreferrer">
+      {company}
+    </a>
+  </h2>
+  <p>
+    <strong>{title}</strong>: {description}
+  </p>
+</div>

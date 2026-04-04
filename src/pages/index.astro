@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro'
+import ProjectCard from '../components/ProjectCard.astro'
+import ExperienceCard from '../components/ExperienceCard.astro';
+import Hero from '../components/Hero.astro';
+import AboutMe from '../components/AboutMe.astro';
+
+const proyectos = [
+  {
+    title: "PEEC",
+    description: "Nace de la necesidad de optimizar los procesos de evaluación de la calidad. El sistema controla roles, captura resultados, realiza cálculos matemáticos (desviación estándar, promedios) y genera PDFs automáticos con gráficas.",
+    techStack: "Laravel 6, JQuery, JavaScript, AJAX, DomPDF, mySQL, Bootstrap 4 y CSS",
+    images: [
+      "./img/peec1.png",
+      "./img/peec2.png",
+      "./img/peec3.png",
+      "./img/peec4.png",
+      "./img/peec5.png"
+    ]
+  },
+  {
+    title: "RoboShot",
+    description: "HMI creada para controlar un brazo robótico que ordena bebidas y cocteles. Permite visualizar ingredientes, disponibilidad, realizar cobros en efectivo y exportar reportes de ventas a Excel y PDF.",
+    techStack: "Electron, NodeJS, KnockOutJS, Laravel 6, PostgreSQL, Bootstrap 4 y CSS",
+    images: [
+      "./img/robo1.png",
+      "./img/robo2.png",
+      "./img/robo3.png",
+      "./img/robo4.png",
+      "./img/robo5.png"
+    ]
+  },
+  {
+    title: "Menú Sanchos",
+    description: "Menú digital implementado por seguridad ante COVID-19. Los clientes acceden mediante código QR a una interfaz amigable y categorizada para facilitar la navegación.",
+    techStack: "JavaScript y MaterializeCSS",
+    images: ["./img/sanchos.jpg"]
+  },
+  {
+    title: "Norma 035",
+    description: "Sistema para la aplicación de cuestionarios que miden el estrés laboral. Captura respuestas, genera reportes PDF y gráficas, sugiere protocolos de apoyo y maneja roles adaptables al organigrama.",
+    techStack: "Laravel 7, JavaScript, AJAX, DomPDF, Chart.js, PostgreSQL",
+    images: ["./img/img-1.png"]
+  },
+  {
+    title: "E-commerce Mavi/VIU",
+    description: "Mantenimiento y creación de módulos para tiendas departamentales. Maquetado de interfaces de diseño, consumo de APIs, creación de servicios REST y optimización de validaciones del lado del cliente.",
+    techStack: "JavaScript, Vue.js, Node.js, Express.js, Docker, Magento, VueStorefront, CSS",
+    images: [
+      "./img/MA.png",
+      "./img/VIU.png",
+      "./img/MAVI.png"
+    ]
+  }
+];
+
+const experiencias = [
+  {
+    company: "The Palace Company",
+    companyUrl: "https://www.thepalacecompany.com/es",
+    title: "Web Developer",
+    description: "Desarrollo de plataforma exclusiva para socios que redujo un 60% las reservas por call center. Implementación de homologación de reservas mediante Micro Front-ends, liberando a equipos de problemas técnicos. Stack: Back-end, QA, UX/UI, Vue.js, TypeScript.",
+    iconUrl: "https://img.icons8.com/bubbles/100/000000/services.png"
+  },
+  {
+    company: "Mavi de Occidente",
+    companyUrl: "https://www.viu.mx/",
+    title: "Front-End Developer",
+    description: "Desarrollo para tiendas departamentales (Muebles América, VIU, MAVI). Responsable de corrección de errores, creación de servicios, maquetado de interfaces y consumo de APIs. Stack: Vue.js, Node.js, Express.js, VueStorefront, Magento, Docker.",
+    iconUrl: "https://img.icons8.com/bubbles/100/000000/services.png"
+  },
+  {
+    company: "CODGO",
+    companyUrl: "https://codgo.com.mx/",
+    title: "Web Developer",
+    description: "Creación de sitios web y e-commerce (WordPress y Magento). Análisis y diseño de bases de datos. Mantenimiento de sistema de control de inventarios. Stack: Angular, Symfony Framework.",
+    iconUrl: "https://img.icons8.com/bubbles/100/000000/services.png"
+  },
+  {
+    company: "Integra Automation",
+    companyUrl: "http://integra-automation.dyndns.org/Index",
+    title: "Web Developer",
+    description: "Desarrollo de sistema para evaluación de la Norma-035. Levantamiento de requerimientos, diseño de BD, elaboración de HMI (Interfaz Hombre-Máquina) y mantenimiento de ERP interno. Stack: Laravel 6.x, JavaScript.",
+    iconUrl: "https://img.icons8.com/bubbles/100/000000/services.png"
+  },
+  {
+    company: "Proyectos JR",
+    companyUrl: "https://proyectosjr.com.mx/",
+    title: "Co-fundador / Developer",
+    description: "Emprendimiento propio enfocado en construcción y mantenimiento de e-commerce. Consumo de APIs de proveedores, mantenimiento de bases de datos y gestión de sistemas ASPEL.",
+    iconUrl: "https://img.icons8.com/bubbles/100/000000/services.png"
+  }
+];
+---
+
+<Layout title="Enrique Mtz| FullStack Developer">
+	<Hero />
+	<AboutMe />
+	<section id="services">
+		<div class="services container">
+		  <div class="service-top">
+			<h1 class="section-title"><span>Experiencia</span> Laboral</h1>
+		  </div>
+		  <div class="service-bottom">
+			{experiencias.map((item) => (
+			  <ExperienceCard 
+				company={item.company}
+				companyUrl={item.companyUrl}
+				title={item.title}
+				description={item.description}
+			  />
+			))}
+		  </div>
+		</div>
+	</section>
+	<section id="projects">
+		<div class="projects container">
+		  <div class="projects-header">
+			<h1 class="section-title">Proyectos <span>Recientes</span></h1>
+		  </div>
+		  
+		  <div class="all-projects">
+			{proyectos.map((p) => (
+			  <ProjectCard 
+				title={p.title}
+				description={p.description}
+				techStack={p.techStack}
+				images={p.images}
+			  />
+			))}
+		  </div>
+		</div>
+	</section>
+</Layout>
