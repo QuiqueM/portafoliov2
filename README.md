@@ -1,11 +1,11 @@
 # 🚀 Enrique Martínez | Frontend Developer & Web Architect
 
-¡Bienvenido al repositorio de mi portafolio profesional! Este proyecto es una vitrina de mi trayectoria de 4 años en la industria, enfocada en la creación de interfaces de alto rendimiento, código mantenible y soluciones escalables.
+¡Bienvenido al repositorio de mi portafolio profesional! Este proyecto es una vitrina de mi trayectoria de 5 años en la industria, enfocada en la creación de interfaces de alto rendimiento, código mantenible y soluciones escalables.
 
 ## 👨‍💻 Sobre mí
 Soy un desarrollador apasionado por el ecosistema de **Vue.js**. Mi enfoque principal es el Frontend, donde aplico principios **SOLID** y patrones de diseño para transformar ideas complejas en experiencias de usuario excepcionales.
 
-* **Experiencia:** 4 años en desarrollo web.
+* **Experiencia:** 5 años en desarrollo web.
 * **Especialidad:** Vue.js, TypeScript y Arquitectura Frontend.
 * **Filosofía:** Mejora continua y código limpio.
 
@@ -18,12 +18,10 @@ Este portafolio ha sido construido utilizando tecnologías modernas para garanti
 ### Frontend & Estilos
 * **Framework:** [Astro](https://astro.build/) (para un rendimiento estático superior).
 * **UI Library:** [Vue.js 3](https://vuejs.org/) (Componentes dinámicos).
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [Vuetify](https://vuetifyjs.com/).
-* **State Management:** [Pinia](https://pinia.vuejs.org/).
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 
 ### Backend & Tooling
 * **Lenguajes:** TypeScript & JavaScript (ES6+).
-* **Integraciones:** Node.js, Laravel & Strapi (Headless CMS).
 * **Despliegue:** [Vercel](https://vercel.com/).
 
 ---
