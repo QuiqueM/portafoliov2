@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import SEO from "../components/SEO.astro";
 
 interface Props {
   title: string;
@@ -10,13 +11,11 @@ const { title } = Astro.props;
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/style.css" />
-    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO title={title} />
     <meta
       name="google-site-verification"
       content="YgKOsFHtyLBaiYhrqsSqsSP4PJEj45MLQ_CJ6q1HBlg"
